@@ -18,6 +18,11 @@ def login(context):
 def click_settings(context):
     context.app.settings_page.click_settings()
 
+@when('Click continue')
+def click_continue(context):
+    LOGIN_BTN = (By.XPATH, "//a[@class='login-button w-button']")
+    context.driver.find_element(*LOGIN_BTN).click()
+
 
     #context.driver.execute_script("window.scrollBy(0, 1000);")
 
@@ -29,7 +34,10 @@ def click_user_guide(context):
 @then('Verify the right page opens')
 def verify_right_page(context):
     context.app.user_guide_page.verify_user_guide_page_opened()
+    sleep(5)
 
 @then( 'Verify all lesson videos contain titles')
 def verify_lesson_titles(context):
     context.app.user_guide_page.verify_lesson_titles()
+
+    sleep(5)
