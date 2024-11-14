@@ -5,6 +5,8 @@ from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.chrome.options import Options
 
 from app.application import Application
+#
+
 
 # def browser_init(context):
 
