@@ -14,9 +14,14 @@ def open_main(context):
 def login(context):
     context.app.login_page.login("elkwabena@gmail.com","FMlithonia1!")
 
+# @when('Click on settings option')
+# def click_settings(context):
+#     context.app.settings_page.click_settings()
+
 @when('Click on settings option')
-def click_settings(context):
-    context.app.settings_page.click_settings()
+def open_settings_btn(context):
+    context.app.main_page.open_settings_btn()
+
 
 @when('Click continue')
 def click_continue(context):
